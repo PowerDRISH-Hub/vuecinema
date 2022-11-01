@@ -20,3 +20,66 @@
     width: 166px;
 
 }
+
+.nav {
+    padding: 29px 0;
+    background: #010305CC;
+    backdrop-filter: blur(7.5px);
+
+}
+
+.nav__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    font-family: "Comfortaa";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    color: var(--white);
+
+
+
+}
+
+.menu__link {
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    color: var(--white);
+    transition: 0.5s;
+    position: relative;
+}
+.menu__link::after{
+    content: "";
+    position: absolute;
+    bottom: -43px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: #ED8E00;
+    border-radius: 23px 10px 0px 0px;
+    transition: 0.3s;
+    transform: translateX(-50%);
+}
+
+.menu__link:hover.menu__link::after{
+    width: 100%;
+    
+}
+
+.menu__link:hover {
+    color: var(--light);
+}
