@@ -83,3 +83,20 @@
 .menu__link:hover {
     color: var(--light);
 }
+
+@media screen and (max-width:768px){
+    .nav__wrap{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .menu__link::after{
+        bottom: -29px;
+    }
+    
+}
+
+@media screen and (max-width:360px){
+    .nav__menu{
+        gap: 15px;
+    }
+}
