@@ -1,4 +1,10 @@
-.series__desc {
+.series {
+    margin-bottom: 63px;
+}
+
+
+
+.series__post {
     margin-top: 54px;
     display: flex;
     justify-content: center;
@@ -6,23 +12,32 @@
     flex-direction: column;
     position: relative;
     z-index: 10;
-    color: var(--white);
-    width: 1113px;
+    max-width: 1113px;
     height: 436px;
+    padding: 0 22px;
+    border-radius: 6px;
+    overflow: hidden;
+
 }
 
-.series__imgBg {
+.series__post:hover .post__imgBg {
+    width: 1400px;
+}
+
+.post__imgBg {
     position: absolute;
     z-index: -2;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    left: 0;
+    left: 50%;
     top: 0;
     border-radius: 6px;
+    transform: translateX(-50%);
+    transition: 0.3s;
 }
 
-.series__Bg {
+.post__Bg {
     position: absolute;
     z-index: -1;
     width: 100%;
@@ -34,20 +49,78 @@
     border-radius: 6px;
 }
 
-.desc__p {
+.post__p {
     font-family: "Comfortaa";
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
     width: 1069px;
     color: var(--white);
+    margin: 27px 0 30px;
+    text-align: center;
 }
 
-.desc__h {
+.post__h {
     font-family: "Comfortaa";
     font-size: 40px;
     font-weight: 700;
     line-height: 45px;
+}
 
+.series__collection {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 190px;
+    gap: 30px;
+    margin-top: 30px;
+}
 
+.series__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    gap: 20px;
+    border-radius: 6px;
+}
+
+.series__item-imgBg {
+    position: absolute;
+    z-index: -2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.series__itemBg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    background: linear-gradient(95.68deg, rgba(35, 35, 35, 0.8) 0%, rgba(11, 11, 11, 0.6) 100%);
+}
+
+.series__icon {
+    font-size: 40px;
+}
+
+.series__item-h {
+    font-family: "Comfortaa";
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 27px;
+    color: white;
+}
+
+.series__item:nth-of-type(6n+1) {
+    grid-column: span 2;
+    grid-row: span 2;
 }
